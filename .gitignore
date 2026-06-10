@@ -1,0 +1,6 @@
+.DS_Store
+.npm-cache
+.puppeteer-cache
+.venv
+.idea
+.env
