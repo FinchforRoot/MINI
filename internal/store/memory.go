@@ -1,4 +1,4 @@
-package database
+package memory
 
 import (
 	"sync"
@@ -36,7 +36,7 @@ func (s *EventStore) Add(event TransferEvent) {
 	s.events = append(s.events, event)
 }
 
-func (s *EventStore) list() []TransferEvent {
+func (s *EventStore) List() []TransferEvent {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	out := make([]TransferEvent, len(s.events))
